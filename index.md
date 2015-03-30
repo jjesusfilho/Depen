@@ -22,7 +22,7 @@ assets      : {js: 'test.js'}
 </html>
 
 ----
-## Metodologia
+
 <html>
 <iframe src="calc.htm"></iframe>
 </html>
