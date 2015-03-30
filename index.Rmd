@@ -1,0 +1,113 @@
+---
+title       : Indicadores de Violência Institucional
+subtitle    :  Medindo a violência dos estados
+author      : Maria Gorete Marques de Jesus 
+job         : José de Jesus Filho
+framework   : io2012     # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax, bootstrap, quiz]
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+assets      : {js: 'test.js'}
+github:
+user        : jjesusfilho
+repo        : sdh
+---
+
+```{r echo = F}
+opts_chunk$set(cache = F)
+```
+
+## Introdução
+
+<html>
+<iframe src="introducao.htm"></iframe>
+</html>
+
+----
+
+<html>
+<iframe src="calculo.htm"></iframe>
+</html>
+
+---
+## Tabela de cálculo de indicadores de diagnóstico
+
+<html>
+<head>
+<style>
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+   }
+   </style>
+   <head>
+  <body>
+  <div class="center">
+  <iframe src="Tdia.htm"></iframe>
+  </div>
+  <body>
+</html>
+
+----
+
+## Tabela de cálculo de indicadores de desempenho
+
+<html>
+<head>
+<style>
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+   }
+   </style>
+   <head>
+  <body>
+  <div class="center">
+  <iframe src="Td.htm"></iframe>
+  </div>
+  <body>
+</html>
+
+---
+
+## Classificação dos estados segundo a violência e o desempenho institucionais
+
+```{r echo=F, results='asis',  message=F}
+library(googleVis)
+estados<-c("Acre","Alagoas","Amapá", "Amazonas" ,"Bahia", "Ceara", "Distrito Federal","Espírito Santo", "Goiás", "Maranhão","Mato Grosso","Mato Grosso do Sul","Minas Gerais","Pará","Paraíba","Paraná","Pernambuco","Piauí","Rio de Janeiro","Rio Grande do Norte","Rio Grande do Sul","Rondônia","Roraima","Santa Catarina","Sergipe","São Paulo","Tocantins")
+violencia<- round(as.numeric(c("0.404464004","0.471365654", "0.491356438", "0.499123059", "0.511072578", "0.517365485", "0.531183764", "0.58320971",  "0.590841076", "0.595026357", "0.597416819", "0.618968887","0.628303178", "0.64566578",  "0.645774774", "0.651187879", "0.660397716", "0.661303727", "0.67163827",  "0.688740978", "0.699634379", "0.700615809", "0.721589895", "0.772011743", "0.780883774", "0.797720548", "0.802181014")),digits=2)
+nivel<-cut(violencia,5)
+desempenho<-c(4, 4 ,2 ,0 ,5 ,3 ,3 ,5 ,4 ,4 ,5 ,1 ,2 ,4 ,3 ,5 ,2 ,5 ,5 ,4 ,2 ,1, 4, 3, 0, 4, 2)
+indice<-data.frame(estados,violencia,nivel,desempenho)
+tabela<-data.frame(indice[c(1,2,4)])
+tabela1<-gvisTable(tabela, options=list(width="600px",height="600px",page='disable',allowHtml=TRUE))
+print(tabela1,tag='chart')
+```
+
+---
+
+## Mapa dos estados segundo o nível de violência
+
+```{r echo=F, results='asis',  message=F}
+geo<- gvisGeoMap(indice,locationvar="estados",numvar="violencia", options=list(region="BR",
+    dataMode="regions", title="Passe o mouse para ver valor respectivo",width="600px", height="600px", 
+    colors="['0xffffb2','0xfed976','0xfeb24c','0xfd8d3c','0xf03b20','0xbd0026']",resolution="provinces"))
+print(geo,tag='chart')
+```
+
+---
+
+## Mapa do estados segundo o desempenho institucional
+
+```{r echo=FALSE, results='asis', message=FALSE}
+geo2<-gvisGeoMap(indice,locationvar="estados",numvar="desempenho", options=list(region="BR",
+    dataMode="regions", title="Passe o mouse para ver valor respectivo",width="600px",height="600px", 
+    colors="['0xf0f9e8','0xbae4bc','0x7bccc4','0x43a2ca','0x0868ac']",resolution="provinces"))
+print(geo2,tag='chart')
+```
+
+
