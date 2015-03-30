@@ -7,7 +7,7 @@ framework   : io2012     # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [mathjax, bootstrap, quiz]
-mode        : standalone # {standalone, draft}
+mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 assets      : {js: 'test.js'}
 
@@ -18,13 +18,13 @@ assets      : {js: 'test.js'}
 ## Introdução
 
 <html>
-<iframe src="introducao.htm"></iframe>
+<iframe src="int.htm"></iframe>
 </html>
 
 ----
 
 <html>
-<iframe src="calculo.htm"></iframe>
+<iframe src="calc.htm"></iframe>
 </html>
 
 ---
