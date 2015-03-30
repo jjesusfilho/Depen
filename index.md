@@ -10,6 +10,9 @@ widgets     : [mathjax, bootstrap, quiz]
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 assets      : {js: 'test.js'}
+github:
+user: jjesusfilho
+repo: sdh
 
 ---
 
@@ -18,13 +21,13 @@ assets      : {js: 'test.js'}
 ## Introdução
 
 <html>
-<iframe src="int.htm"></iframe>
+<iframe src="int.html"></iframe>
 </html>
 
 ----
 
 <html>
-<iframe src="calc.htm"></iframe>
+<iframe src="calc.html"></iframe>
 </html>
 
 ---
