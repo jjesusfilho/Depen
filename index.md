@@ -1,89 +1,65 @@
 ---
 title       : Indicadores de Violência Institucional
 subtitle    :  Medindo a violência dos estados
-author      : Maria Gorete Marques de Jesus 
+author      : Maria Gorete Marques de Jesus
 job         : José de Jesus Filho
 framework   : io2012     # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight.js # {highlight.js, prettify, highlight}
+highlighter : highlight # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [mathjax, bootstrap, quiz]
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 assets      : {js: 'test.js'}
-github:
-user: jjesusfilho
-repo: sdh
 
 ---
 
-
-
 ## Introdução
 
-<html>
+
 <iframe src="int.html"></iframe>
-</html>
+
 
 ----
 
-<html>
+## Metodologia
+
 <iframe src="calc.html"></iframe>
-</html>
+
 
 ---
 ## Tabela de cálculo de indicadores de diagnóstico
 
-<html>
-<head>
-<style>
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-   }
-   </style>
-   <head>
-  <body>
-  <div class="center">
-  <iframe src="Tdia.htm"></iframe>
-  </div>
-  <body>
-</html>
 
-----
+ 
+<iframe src="Tdia.htm"></iframe>
+
+
+---- class=center
 
 ## Tabela de cálculo de indicadores de desempenho
 
-<html>
-<head>
-<style>
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-   }
-   </style>
-   <head>
-  <body>
-  <div class="center">
-  <iframe src="Td.htm"></iframe>
-  </div>
-  <body>
-</html>
+
+<iframe src="Td.htm"></iframe>
+  
 
 ---
 
-## Classificação dos estados segundo a violência e o desempenho institucionais
+### Classificação dos estados segundo a violência e o desempenho institucionais
+
+<div style='
+float:left;
+padding-left:100px';
+>
 
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
-<!-- Mon Mar 30 07:21:54 2015 -->
+<!-- Wed Apr  1 06:38:26 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID37f82fca4e1a () {
+function gvisDataTableID1bba77dc86ff () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -231,16 +207,17 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID37f82fca4e1a() {
-var data = gvisDataTableID37f82fca4e1a();
+function drawChartTableID1bba77dc86ff() {
+var data = gvisDataTableID1bba77dc86ff();
 var options = {};
 options["allowHtml"] = true;
-options["width"] = "600px";
-options["height"] = "600px";
+options["width"] = "800px";
+options["height"] = "450px";
 options["page"] = "disable";
+options["align"] = "left";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID37f82fca4e1a')
+    document.getElementById('TableID1bba77dc86ff')
     );
     chart.draw(data,options);
     
@@ -264,9 +241,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID37f82fca4e1a);
+callbacks.push(drawChartTableID1bba77dc86ff);
 })();
-function displayChartTableID37f82fca4e1a() {
+function displayChartTableID1bba77dc86ff() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -290,27 +267,35 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID37f82fca4e1a"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1bba77dc86ff"></script>
  
 <!-- divChart -->
   
-<div id="TableID37f82fca4e1a" 
-  style="width: 600px; height: 600px;">
+<div id="TableID1bba77dc86ff" 
+  style="width: 800px; height: 450px;">
 </div>
 
----
+</div>
+
+--- 
 
 ## Mapa dos estados segundo o nível de violência
 
+<div style='
+margin-left:auto;
+margin-right:auto;
+width:70%;'>
+
+
 <!-- GeoMap generated in R 3.1.2 by googleVis 0.5.8 package -->
-<!-- Mon Mar 30 06:38:03 2015 -->
+<!-- Wed Apr  1 06:38:26 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataGeoMapID374e63b616f9 () {
+function gvisDataGeoMapID1bba261f08d2 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -430,19 +415,19 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartGeoMapID374e63b616f9() {
-var data = gvisDataGeoMapID374e63b616f9();
+function drawChartGeoMapID1bba261f08d2() {
+var data = gvisDataGeoMapID1bba261f08d2();
 var options = {};
 options["dataMode"] = "regions";
-options["width"] = "600px";
-options["height"] = "600px";
+options["width"] = "450px";
+options["height"] = "450px";
 options["region"] = "BR";
 options["title"] = "Passe o mouse para ver valor respectivo";
 options["colors"] = ['0xffffb2','0xfed976','0xfeb24c','0xfd8d3c','0xf03b20','0xbd0026'];
 options["resolution"] = "provinces";
 
     var chart = new google.visualization.GeoMap(
-    document.getElementById('GeoMapID374e63b616f9')
+    document.getElementById('GeoMapID1bba261f08d2')
     );
     chart.draw(data,options);
     
@@ -466,9 +451,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartGeoMapID374e63b616f9);
+callbacks.push(drawChartGeoMapID1bba261f08d2);
 })();
-function displayChartGeoMapID374e63b616f9() {
+function displayChartGeoMapID1bba261f08d2() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -492,27 +477,35 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoMapID374e63b616f9"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoMapID1bba261f08d2"></script>
  
 <!-- divChart -->
   
-<div id="GeoMapID374e63b616f9" 
-  style="width: 600px; height: 600px;">
+<div id="GeoMapID1bba261f08d2" 
+  style="width: 450px; height: 450px;">
+</div>
+
 </div>
 
 ---
 
-## Mapa do estados segundo o desempenho institucional
+### Mapa do estados segundo o desempenho institucional
+
+<div style='
+margin-left:auto;
+margin-right:auto;
+height:100%;
+width:70%;'>
 
 <!-- GeoMap generated in R 3.1.2 by googleVis 0.5.8 package -->
-<!-- Mon Mar 30 06:38:03 2015 -->
+<!-- Wed Apr  1 06:38:26 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataGeoMapID374e70e3afa0 () {
+function gvisDataGeoMapID1bba6fc6903c () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -632,19 +625,19 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartGeoMapID374e70e3afa0() {
-var data = gvisDataGeoMapID374e70e3afa0();
+function drawChartGeoMapID1bba6fc6903c() {
+var data = gvisDataGeoMapID1bba6fc6903c();
 var options = {};
 options["dataMode"] = "regions";
-options["width"] = "600px";
-options["height"] = "600px";
+options["width"] = "500px";
+options["height"] = "500px";
 options["region"] = "BR";
 options["title"] = "Passe o mouse para ver valor respectivo";
 options["colors"] = ['0xf0f9e8','0xbae4bc','0x7bccc4','0x43a2ca','0x0868ac'];
 options["resolution"] = "provinces";
 
     var chart = new google.visualization.GeoMap(
-    document.getElementById('GeoMapID374e70e3afa0')
+    document.getElementById('GeoMapID1bba6fc6903c')
     );
     chart.draw(data,options);
     
@@ -668,9 +661,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartGeoMapID374e70e3afa0);
+callbacks.push(drawChartGeoMapID1bba6fc6903c);
 })();
-function displayChartGeoMapID374e70e3afa0() {
+function displayChartGeoMapID1bba6fc6903c() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -694,12 +687,12 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoMapID374e70e3afa0"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoMapID1bba6fc6903c"></script>
  
 <!-- divChart -->
   
-<div id="GeoMapID374e70e3afa0" 
-  style="width: 600px; height: 600px;">
+<div id="GeoMapID1bba6fc6903c" 
+  style="width: 500px; height: 500px;">
 </div>
 
-
+</div>

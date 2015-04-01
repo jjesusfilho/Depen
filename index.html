@@ -12,10 +12,11 @@
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <link rel="stylesheet" href="libraries/highlighters/highlight/css/tomorrow.css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
 <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
 <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/t.css"></link>
 
   
   <!-- Grab CDN jQuery, fall back to local if offline -->
@@ -48,23 +49,18 @@
     <h2>Introdução</h2>
   </hgroup>
   <article data-timings="">
-    <p><html></p>
-
-<iframe src="int.html"></iframe>
-
-<p></html></p>
+    <iframe src="int.html"></iframe>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Metodologia</h2>
+  </hgroup>
   <article data-timings="">
-    <p><html></p>
-
-<iframe src="calc.html"></iframe>
-
-<p></html></p>
+    <iframe src="calc.html"></iframe>
 
   </article>
   <!-- Presenter Notes -->
@@ -75,24 +71,7 @@
     <h2>Tabela de cálculo de indicadores de diagnóstico</h2>
   </hgroup>
   <article data-timings="">
-    <p><html>
-<head></p>
-
-<style>
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-   }
-   </style>
-
-<p><head>
-  <body>
-  <div class="center">
-  <iframe src="Tdia.htm"></iframe>
-  </div>
-  <body>
-</html></p>
+    <iframe src="Tdia.htm"></iframe>
 
   </article>
   <!-- Presenter Notes -->
@@ -103,24 +82,8 @@
     <h2>Tabela de cálculo de indicadores de desempenho</h2>
   </hgroup>
   <article data-timings="">
-    <p><html>
-<head></p>
-
-<style>
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-   }
-   </style>
-
-<p><head>
-  <body>
-  <div class="center">
-  <iframe src="Td.htm"></iframe>
-  </div>
-  <body>
-</html></p>
+    <iframe src="Td.htm"></iframe>
+  
 
   </article>
   <!-- Presenter Notes -->
@@ -128,19 +91,23 @@
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2>Classificação dos estados segundo a violência e o desempenho institucionais</h2>
+    <h3>Classificação dos estados segundo a violência e o desempenho institucionais</h3>
   </hgroup>
   <article data-timings="">
-    <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
+    <div style='
+float:left;
+padding-left:100px';
+>
 
-<!-- Mon Mar 30 07:21:54 2015 -->
+<!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
+<!-- Wed Apr  1 06:38:26 2015 -->
+
 
 <!-- jsHeader -->
-
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID37f82fca4e1a () {
+function gvisDataTableID1bba77dc86ff () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -288,16 +255,17 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID37f82fca4e1a() {
-var data = gvisDataTableID37f82fca4e1a();
+function drawChartTableID1bba77dc86ff() {
+var data = gvisDataTableID1bba77dc86ff();
 var options = {};
 options["allowHtml"] = true;
-options["width"] = "600px";
-options["height"] = "600px";
+options["width"] = "800px";
+options["height"] = "450px";
 options["page"] = "disable";
+options["align"] = "left";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID37f82fca4e1a')
+    document.getElementById('TableID1bba77dc86ff')
     );
     chart.draw(data,options);
     
@@ -321,9 +289,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID37f82fca4e1a);
+callbacks.push(drawChartTableID1bba77dc86ff);
 })();
-function displayChartTableID37f82fca4e1a() {
+function displayChartTableID1bba77dc86ff() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -346,17 +314,16 @@ callbacks.shift()();
 // jsFooter
 </script>
  
-
 <!-- jsChart -->  
-
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID37f82fca4e1a"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1bba77dc86ff"></script>
  
-
 <!-- divChart -->
-
-<div id="TableID37f82fca4e1a" 
-  style="width: 600px; height: 600px;">
+  
+<div id="TableID1bba77dc86ff" 
+  style="width: 800px; height: 450px;">
 </div>
+
+<p></div></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -367,16 +334,21 @@ callbacks.shift()();
     <h2>Mapa dos estados segundo o nível de violência</h2>
   </hgroup>
   <article data-timings="">
-    <!-- GeoMap generated in R 3.1.2 by googleVis 0.5.8 package -->
+    <div style='
+margin-left:auto;
+margin-right:auto;
+width:70%;'>
 
-<!-- Mon Mar 30 06:38:03 2015 -->
+
+<!-- GeoMap generated in R 3.1.2 by googleVis 0.5.8 package -->
+<!-- Wed Apr  1 06:38:26 2015 -->
+
 
 <!-- jsHeader -->
-
 <script type="text/javascript">
  
 // jsData 
-function gvisDataGeoMapID374e63b616f9 () {
+function gvisDataGeoMapID1bba261f08d2 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -496,19 +468,19 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartGeoMapID374e63b616f9() {
-var data = gvisDataGeoMapID374e63b616f9();
+function drawChartGeoMapID1bba261f08d2() {
+var data = gvisDataGeoMapID1bba261f08d2();
 var options = {};
 options["dataMode"] = "regions";
-options["width"] = "600px";
-options["height"] = "600px";
+options["width"] = "450px";
+options["height"] = "450px";
 options["region"] = "BR";
 options["title"] = "Passe o mouse para ver valor respectivo";
 options["colors"] = ['0xffffb2','0xfed976','0xfeb24c','0xfd8d3c','0xf03b20','0xbd0026'];
 options["resolution"] = "provinces";
 
     var chart = new google.visualization.GeoMap(
-    document.getElementById('GeoMapID374e63b616f9')
+    document.getElementById('GeoMapID1bba261f08d2')
     );
     chart.draw(data,options);
     
@@ -532,9 +504,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartGeoMapID374e63b616f9);
+callbacks.push(drawChartGeoMapID1bba261f08d2);
 })();
-function displayChartGeoMapID374e63b616f9() {
+function displayChartGeoMapID1bba261f08d2() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -557,17 +529,16 @@ callbacks.shift()();
 // jsFooter
 </script>
  
-
 <!-- jsChart -->  
-
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoMapID374e63b616f9"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoMapID1bba261f08d2"></script>
  
-
 <!-- divChart -->
-
-<div id="GeoMapID374e63b616f9" 
-  style="width: 600px; height: 600px;">
+  
+<div id="GeoMapID1bba261f08d2" 
+  style="width: 450px; height: 450px;">
 </div>
+
+<p></div></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -575,19 +546,24 @@ callbacks.shift()();
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>Mapa do estados segundo o desempenho institucional</h2>
+    <h3>Mapa do estados segundo o desempenho institucional</h3>
   </hgroup>
   <article data-timings="">
-    <!-- GeoMap generated in R 3.1.2 by googleVis 0.5.8 package -->
+    <div style='
+margin-left:auto;
+margin-right:auto;
+height:100%;
+width:70%;'>
 
-<!-- Mon Mar 30 06:38:03 2015 -->
+<!-- GeoMap generated in R 3.1.2 by googleVis 0.5.8 package -->
+<!-- Wed Apr  1 06:38:26 2015 -->
+
 
 <!-- jsHeader -->
-
 <script type="text/javascript">
  
 // jsData 
-function gvisDataGeoMapID374e70e3afa0 () {
+function gvisDataGeoMapID1bba6fc6903c () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -707,19 +683,19 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartGeoMapID374e70e3afa0() {
-var data = gvisDataGeoMapID374e70e3afa0();
+function drawChartGeoMapID1bba6fc6903c() {
+var data = gvisDataGeoMapID1bba6fc6903c();
 var options = {};
 options["dataMode"] = "regions";
-options["width"] = "600px";
-options["height"] = "600px";
+options["width"] = "500px";
+options["height"] = "500px";
 options["region"] = "BR";
 options["title"] = "Passe o mouse para ver valor respectivo";
 options["colors"] = ['0xf0f9e8','0xbae4bc','0x7bccc4','0x43a2ca','0x0868ac'];
 options["resolution"] = "provinces";
 
     var chart = new google.visualization.GeoMap(
-    document.getElementById('GeoMapID374e70e3afa0')
+    document.getElementById('GeoMapID1bba6fc6903c')
     );
     chart.draw(data,options);
     
@@ -743,9 +719,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartGeoMapID374e70e3afa0);
+callbacks.push(drawChartGeoMapID1bba6fc6903c);
 })();
-function displayChartGeoMapID374e70e3afa0() {
+function displayChartGeoMapID1bba6fc6903c() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -768,17 +744,16 @@ callbacks.shift()();
 // jsFooter
 </script>
  
-
 <!-- jsChart -->  
-
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoMapID374e70e3afa0"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoMapID1bba6fc6903c"></script>
  
-
 <!-- divChart -->
-
-<div id="GeoMapID374e70e3afa0" 
-  style="width: 600px; height: 600px;">
+  
+<div id="GeoMapID1bba6fc6903c" 
+  style="width: 500px; height: 500px;">
 </div>
+
+<p></div></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -796,7 +771,7 @@ callbacks.shift()();
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title=''>
+        data-slide=2 title='Metodologia'>
          2
       </a>
     </li>
@@ -866,10 +841,5 @@ callbacks.shift()();
     $("[rel='tooltip']").tooltip(); 
   });  
   </script>  
-  
-  <!-- LOAD HIGHLIGHTER JS FILES -->
-  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
    
   </html>

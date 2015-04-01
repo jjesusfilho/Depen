@@ -1,81 +1,55 @@
 ---
 title       : Indicadores de Violência Institucional
 subtitle    :  Medindo a violência dos estados
-author      : Maria Gorete Marques de Jesus 
+author      : Maria Gorete Marques de Jesus
 job         : José de Jesus Filho
 framework   : io2012     # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight.js # {highlight.js, prettify, highlight}
+highlighter : highlight # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [mathjax, bootstrap, quiz]
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 assets      : {js: 'test.js'}
-github:
-user: jjesusfilho
-repo: sdh
 
 ---
 
-```{r echo = F}
-opts_chunk$set(cache = F)
-```
-
 ## Introdução
 
-<html>
+
 <iframe src="int.html"></iframe>
-</html>
+
 
 ----
 
-<html>
+## Metodologia
+
 <iframe src="calc.html"></iframe>
-</html>
+
 
 ---
 ## Tabela de cálculo de indicadores de diagnóstico
 
-<html>
-<head>
-<style>
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-   }
-   </style>
-   <head>
-  <body>
-  <div class="center">
-  <iframe src="Tdia.htm"></iframe>
-  </div>
-  <body>
-</html>
 
-----
+ 
+<iframe src="Tdia.htm"></iframe>
+
+
+---- class=center
 
 ## Tabela de cálculo de indicadores de desempenho
 
-<html>
-<head>
-<style>
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-   }
-   </style>
-   <head>
-  <body>
-  <div class="center">
-  <iframe src="Td.htm"></iframe>
-  </div>
-  <body>
-</html>
+
+<iframe src="Td.htm"></iframe>
+  
 
 ---
 
-## Classificação dos estados segundo a violência e o desempenho institucionais
+### Classificação dos estados segundo a violência e o desempenho institucionais
+
+<div style='
+float:left;
+padding-left:100px';
+>
 
 ```{r echo=F, results='asis',  message=F}
 library(googleVis)
@@ -85,30 +59,46 @@ nivel<-cut(violencia,5)
 desempenho<-c(4, 4 ,2 ,0 ,5 ,3 ,3 ,5 ,4 ,4 ,5 ,1 ,2 ,4 ,3 ,5 ,2 ,5 ,5 ,4 ,2 ,1, 4, 3, 0, 4, 2)
 indice<-data.frame(estados,violencia,nivel,desempenho)
 tabela<-data.frame(indice[c(1,2,4)])
-tabela1<-gvisTable(tabela, options=list(width="600px",height="600px",page='disable',allowHtml=TRUE))
+tabela1<-gvisTable(tabela, options=list(width="800px",height="450px",page='disable',allowHtml=TRUE, align="left"))
 print(tabela1,tag='chart')
 ```
 
----
+</div>
+
+--- 
 
 ## Mapa dos estados segundo o nível de violência
 
+<div style='
+margin-left:auto;
+margin-right:auto;
+width:70%;'>
+
+
 ```{r echo=F, results='asis',  message=F}
 geo<- gvisGeoMap(indice,locationvar="estados",numvar="violencia", options=list(region="BR",
-    dataMode="regions", title="Passe o mouse para ver valor respectivo",width="600px", height="600px", 
+    dataMode="regions", title="Passe o mouse para ver valor respectivo",width="450px", height="450px", 
     colors="['0xffffb2','0xfed976','0xfeb24c','0xfd8d3c','0xf03b20','0xbd0026']",resolution="provinces"))
 print(geo,tag='chart')
 ```
 
+</div>
+
 ---
 
-## Mapa do estados segundo o desempenho institucional
+### Mapa do estados segundo o desempenho institucional
+
+<div style='
+margin-left:auto;
+margin-right:auto;
+height:100%;
+width:70%;'>
 
 ```{r echo=FALSE, results='asis', message=FALSE}
 geo2<-gvisGeoMap(indice,locationvar="estados",numvar="desempenho", options=list(region="BR",
-    dataMode="regions", title="Passe o mouse para ver valor respectivo",width="600px",height="600px", 
+    dataMode="regions", title="Passe o mouse para ver valor respectivo",width="500px",height="500px", 
     colors="['0xf0f9e8','0xbae4bc','0x7bccc4','0x43a2ca','0x0868ac']",resolution="provinces"))
 print(geo2,tag='chart')
 ```
 
-
+</div>
